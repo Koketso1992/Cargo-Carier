@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Fleet_tracking_system.Models.ServiceReport>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>ServiceReport</h1>
+
+<p>
+    <a asp-action="Create">AddServiceReport</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompletionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cost)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompletionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ReportID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ReportID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ReportID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Fleet_tracking_system.Models.Vehicles>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Vehicles</h1>
+
+<p>
+    <a asp-action="Create">Add vehicle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LicensePlate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VIN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Manufacturer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EngineSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentOdometerReading)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NextServiceOdometer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LicensePlate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VIN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manufacturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EngineSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentOdometerReading)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NextServiceOdometer)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VehicleID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VehicleID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VehicleID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
