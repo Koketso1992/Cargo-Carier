@@ -1,0 +1,36 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Use 100vh to represent 100% of the viewport height */
+}
+
+.container {
+    flex: 1;
+}
+
+.footer {
+    flex-shrink: 0; /* Prevent the footer from shrinking when there's not enough content */
+}

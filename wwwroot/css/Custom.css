@@ -1,0 +1,29 @@
+/* Define custom colors */
+:root {
+    --primary-color: #cd9575; /* Orange */
+    --secondary-color: #efdecd; /* Purple */
+}
+
+body {
+    background-color: var(--primary-color); /* Orange background */
+}
+
+h1, h2, h3 {
+    color: var(--secondary-color); /* Purple text for headings */
+}
+
+footer {
+    background-color: var(--secondary-color); /* Purple background for the footer */
+    color: black; /* White text in the footer */
+    padding: 10px; /* Adjust padding as needed */
+}
+
+footer {
+    position: fixed; /* or "sticky" for a sticky footer */
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #fbceb1 !important;
+}
